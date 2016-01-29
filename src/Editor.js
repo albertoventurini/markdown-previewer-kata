@@ -16,7 +16,10 @@ export default class Editor extends Component {
 
   render() {
     return (
-      <textarea ref="editor" value={this.state.text} style={{width: '100%'}} onChange={this.textChanged.bind(this)} />
+      <textarea ref="editor"
+                value={this.state.text}
+                style={{width: '100%', height: '400px'}}
+                onChange={this.textChanged.bind(this)} />
     );
   }
 }

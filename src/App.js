@@ -14,14 +14,12 @@ export default class App extends Component {
 
   render() {
     return (
-      <div style={{display: 'table', width: '100%'}}>
-        <div style={{display: 'table-row'}}>
-          <div style={{display: 'table-cell', width: '50%'}}>
-            <Editor textChanged={this.textChanged.bind(this)} />
-          </div>
-          <div style={{display: 'table-cell', width: '50%'}}>
-            <Previewer markdown={this.state.markdown} />
-          </div>
+      <div>
+        <div style={{float: 'left', width: '48%'}}>
+          <Editor textChanged={this.textChanged.bind(this)} />
+        </div>
+        <div style={{float: 'right', width: '48%'}}>
+          <Previewer markdown={this.state.markdown} />
         </div>
       </div>
     );
