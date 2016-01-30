@@ -6,8 +6,8 @@ export default class Editor extends Component {
     this.state = {text: ''};
   }
 
-  textChanged() {
-    var text = this.refs["editor"].value;
+  textChanged(event) {
+    var text = event.target.value;
     if(this.props.textChanged) {
       this.props.textChanged(text);
     }
@@ -16,8 +16,7 @@ export default class Editor extends Component {
 
   render() {
     return (
-      <textarea ref="editor"
-                value={this.state.text}
+      <textarea value={this.state.text}
                 style={{width: '100%', height: '400px'}}
                 onChange={this.textChanged.bind(this)} />
     );
